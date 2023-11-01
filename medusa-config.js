@@ -22,14 +22,12 @@ try {
 } catch (e) {}
 
 // CORS when consuming Medusa from admin
-const ADMIN_CORS =
-  process.env.ADMIN_CORS ||
-  "https://medusajs-admin-panel-dashboard-brand.vercel.app";
+const ADMIN_CORS = process.env.ADMIN_CORS || "http://localhost:9000";
 
 // CORS to avoid issues when consuming Medusa from a client
 const STORE_CORS =
   process.env.STORE_CORS ||
-  "https://medusajs-storefront-starter.vercel.app,http://localhost:8000";
+  "http://localhost:8000";
 
 const DATABASE_URL =
   process.env.DATABASE_URL || "postgres://localhost/medusa-starter-default";
